@@ -21,7 +21,7 @@ export const theme = createTheme({
       lineHeight: 1.2,
     },
     h2: {
-      fontSize: "38px",
+      fontSize: "50px",
       fontWeight: 400,
       background:
         "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%)",

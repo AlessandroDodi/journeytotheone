@@ -34,6 +34,7 @@ export default function TextRevealSection() {
         sx={{
           maxWidth: "md",
           mt: 16,
+          mb: 12,
         }}
       >
         <ScrollReveal
