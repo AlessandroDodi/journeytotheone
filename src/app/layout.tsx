@@ -4,7 +4,7 @@ import ThemeRegistry from "@/components/general/ThemeRegistry";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Sneaker Dev",
+  title: "Journey to the one",
   description: "Selling and buying Antibot Services",
 };
 

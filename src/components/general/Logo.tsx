@@ -19,7 +19,7 @@ const Logo = ({ width = 36, variant = "black" }: LogoProps) => {
     >
       <Image
         src={logo}
-        alt="Sneaker Dev Logo"
+        alt="Journey to the one Logo"
         width={width}
         style={{
           height: "auto",
