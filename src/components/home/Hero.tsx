@@ -1,6 +1,7 @@
 import { Stack, Typography, Container, TextField, Button } from "@mui/material";
 import Image from "next/image";
 import gradient from "/public/gradient.png";
+import BlurText from "../animations/BlurText";
 
 const Hero = () => {
   return (
@@ -39,7 +40,8 @@ const Hero = () => {
 
       <Container maxWidth="sm">
         <Stack spacing={4} alignItems="center" textAlign="center">
-          <Typography variant="h1">journey to the one</Typography>
+          <Typography variant="h1">journey to the one </Typography>
+
           <Typography
             variant="subtitle1"
             sx={{ color: "rgba(255, 255, 255, 0.8)" }}
