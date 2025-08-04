@@ -50,7 +50,7 @@ const Hero = () => {
         </Stack>
       </Container>
       <Stack direction={"row"} spacing={2} width={400} mt={6}>
-        <TextField type="email" placeholder="wnter your email" fullWidth />
+        <TextField type="email" placeholder="enter your email" fullWidth />
         <Button variant="outlined" color="info">
           Join
         </Button>
