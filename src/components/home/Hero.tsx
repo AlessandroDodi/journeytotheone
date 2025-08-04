@@ -1,7 +1,6 @@
 import { Stack, Typography, Container, TextField, Button } from "@mui/material";
 import Image from "next/image";
 import gradient from "/public/gradient.png";
-import BlurText from "../animations/BlurText";
 
 const Hero = () => {
   return (
@@ -46,8 +45,9 @@ const Hero = () => {
             variant="subtitle1"
             sx={{ color: "rgba(255, 255, 255, 0.8)" }}
           >
-            We're on the hunt for The One product—and we'll share every hack,
-            failure, and victory. Follow along at journeytotheone.com.
+            We&apos;re on the hunt for The One product—and we&apos;ll share
+            every hack, failure, and victory. Follow along at
+            journeytotheone.com.
           </Typography>
         </Stack>
       </Container>

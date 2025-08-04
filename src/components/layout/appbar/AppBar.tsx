@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import MobileMenuButton from "./MobileMenuButton";
-import AuthButtons from "./AuthButtons";
 import DesktopNavigation from "./DesktopNavigation";
 import Logo from "../../general/Logo";
 import MobileDrawer from "./MobileDrawer";
