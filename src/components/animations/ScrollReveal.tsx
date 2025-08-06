@@ -58,14 +58,14 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       el,
       { transformOrigin: "0% 30%", rotate: baseRotation },
       {
-        ease: "none",
+        ease: "power2.out",
         rotate: 0,
         scrollTrigger: {
           trigger: el,
           scroller,
           start: "top bottom",
           end: rotationEnd,
-          scrub: true,
+          scrub: 1,
         },
       }
     );
@@ -76,15 +76,15 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       wordElements,
       { opacity: baseOpacity, willChange: "opacity" },
       {
-        ease: "none",
+        ease: "power2.out",
         opacity: 1,
-        stagger: 0.2,
+        stagger: 0.1,
         scrollTrigger: {
           trigger: el,
           scroller,
-          start: "top bottom-=30%",
+          start: "top bottom-=20%",
           end: wordAnimationEnd,
-          scrub: true,
+          scrub: 1,
         },
       }
     );
@@ -94,15 +94,15 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         wordElements,
         { filter: `blur(${blurStrength}px)` },
         {
-          ease: "none",
+          ease: "power2.out",
           filter: "blur(0px)",
-          stagger: 0.2,
+          stagger: 0.1,
           scrollTrigger: {
             trigger: el,
             scroller,
-            start: "top bottom-=30%",
+            start: "top bottom-=20%",
             end: wordAnimationEnd,
-            scrub: true,
+            scrub: 1,
           },
         }
       );

@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 const projectsData = [
   {
     name: "Perplexigrid",
-    image: "/projects/perplexigrid.png", // You'll need to add these images to public/projects/
+    image: "/projects/perplexigrid.png",
     description: "Advanced grid-based data visualization platform",
   },
   {
@@ -32,8 +32,6 @@ const ProjectsSection = () => {
       sx={{
         py: { xs: 8, md: 20 },
         backgroundColor: "white",
-        display: "flex",
-        alignItems: "center",
       }}
     >
       <Container maxWidth="lg">
@@ -57,17 +55,28 @@ const ProjectsSection = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={4} justifyContent="center">
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              md: "repeat(2, 1fr)",
+            },
+            gap: 4,
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
           {projectsData.map((project) => (
-            <Grid size={12} key={project.name}>
+            <Box key={project.name} sx={{ width: "100%" }}>
               <ProjectCard
                 name={project.name}
                 image={project.image}
                 onClick={() => handleProjectClick(project.name)}
               />
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Container>
     </Box>
   );

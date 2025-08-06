@@ -12,12 +12,14 @@ const CardContainer = styled(Card)(() => ({
   position: "relative",
   borderRadius: "22px",
   overflow: "hidden",
-  height: 700,
+  height: "400px",
   width: "100%",
+  minWidth: "300px",
   cursor: "pointer",
-  transition: "transform 0.3s ease",
+  transition: "all 0.3s ease",
   "&:hover": {
-    transform: "scale(0.985)",
+    transform: "scale(1.02)",
+    boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
   },
 }));
 

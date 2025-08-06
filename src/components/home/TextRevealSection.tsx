@@ -19,29 +19,11 @@ export default function TextRevealSection() {
         }}
       >
         <ScrollReveal
-          baseOpacity={0.1}
+          baseOpacity={0.05}
           enableBlur={true}
           baseRotation={0}
-          blurStrength={10}
-        >
-          Every journey begins with a single step. The path to greatness is not
-          measured by the destination, but by the courage to begin and the
-          persistence to continue when the road gets difficult.
-        </ScrollReveal>
-      </Box>
-
-      <Box
-        sx={{
-          maxWidth: "md",
-          mt: 16,
-          mb: 12,
-        }}
-      >
-        <ScrollReveal
-          baseOpacity={0.1}
-          enableBlur={true}
-          baseRotation={0}
-          blurStrength={10}
+          blurStrength={8}
+          wordAnimationEnd="bottom center"
         >
           Every journey begins with a single step. The path to greatness is not
           measured by the destination, but by the courage to begin and the
