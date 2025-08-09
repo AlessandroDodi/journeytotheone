@@ -5,7 +5,7 @@ export default function TextRevealSection() {
   return (
     <Stack
       sx={{
-        background: "linear-gradient(to bottom, #dddde8, white)",
+        background: "linear-gradient(to bottom, white, #dddde8, white)",
         py: { xs: 8, md: 12 },
         justifyContent: "center",
         alignContent: "center",
@@ -16,6 +16,7 @@ export default function TextRevealSection() {
         sx={{
           maxWidth: "md",
           pY: 6,
+          px: { xs: 3, sm: 4, md: 0 },
         }}
       >
         <ScrollReveal
@@ -25,9 +26,7 @@ export default function TextRevealSection() {
           blurStrength={8}
           wordAnimationEnd="bottom center"
         >
-          Every journey begins with a single step. The path to greatness is not
-          measured by the destination, but by the courage to begin and the
-          persistence to continue when the road gets difficult.
+          "all we have to decide is what to do with the time that is given us." we're building & shipping a product a month. maybe even several, depends on the month. because in this game, speed beats perfection every single time.
         </ScrollReveal>
       </Box>
     </Stack>

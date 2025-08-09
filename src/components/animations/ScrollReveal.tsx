@@ -24,7 +24,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   scrollContainerRef,
   enableBlur = true,
   baseOpacity = 0.1,
-  baseRotation = 3,
+  baseRotation = 0,
   blurStrength = 4,
   containerClassName = "",
   textClassName = "",
@@ -54,54 +54,49 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         ? scrollContainerRef.current
         : window;
 
-    gsap.fromTo(
-      el,
-      { transformOrigin: "0% 30%", rotate: baseRotation },
-      {
-        ease: "power2.out",
-        rotate: 0,
-        scrollTrigger: {
-          trigger: el,
-          scroller,
-          start: "top bottom",
-          end: rotationEnd,
-          scrub: 1,
-        },
-      }
-    );
+    // Combine animations for better performance
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        scroller,
+        start: "top bottom-=20%",
+        end: wordAnimationEnd,
+        scrub: 1,
+      },
+    });
 
     const wordElements = el.querySelectorAll<HTMLElement>(".word");
 
-    gsap.fromTo(
+    // Single animation for opacity and blur
+    tl.fromTo(
       wordElements,
-      { opacity: baseOpacity, willChange: "opacity" },
+      { 
+        opacity: baseOpacity, 
+        filter: enableBlur ? `blur(${blurStrength}px)` : "blur(0px)",
+        willChange: "opacity, filter"
+      },
       {
         ease: "power2.out",
         opacity: 1,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: el,
-          scroller,
-          start: "top bottom-=20%",
-          end: wordAnimationEnd,
-          scrub: 1,
-        },
+        filter: "blur(0px)",
+        stagger: 0.05,
+        duration: 0.5,
       }
     );
 
-    if (enableBlur) {
+    // Separate rotation animation if needed
+    if (baseRotation !== 0) {
       gsap.fromTo(
-        wordElements,
-        { filter: `blur(${blurStrength}px)` },
+        el,
+        { transformOrigin: "0% 30%", rotate: baseRotation },
         {
           ease: "power2.out",
-          filter: "blur(0px)",
-          stagger: 0.1,
+          rotate: 0,
           scrollTrigger: {
             trigger: el,
             scroller,
-            start: "top bottom-=20%",
-            end: wordAnimationEnd,
+            start: "top bottom",
+            end: rotationEnd,
             scrub: 1,
           },
         }

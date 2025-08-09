@@ -2,19 +2,19 @@ import FAQ from "./FAQ";
 
 const faqItems = [
   {
-    question: "What services do you offer?",
+    question: "why are you guys doing this instead of chilling at your corporate tech job?",
     answer:
-      "We specialize in creating innovative digital solutions including web applications, data visualization platforms, and creative content management tools. Our focus is on delivering cutting-edge technology that solves real-world problems.",
+      "we think that the rest of the decade is dedicated to the builders. we want to create cool stuff and the latency of delivery and the lack of agile movement in corps prevents us from shipping ideas fast.",
   },
   {
-    question: "How can I stay updated with your latest projects?",
+    question: "what do you expect to gain from this?",
     answer:
-      "Subscribe to our newsletter to receive updates about new projects, technology insights, and behind-the-scenes content. We regularly share our latest developments and industry thoughts.",
+      "we want to find the one project, get funded and build it like we do. quick, clean and lean! we are still unsure on what exactly this will be but trust us we will know it when we see it.",
   },
   {
-    question: "Do you take on new projects?",
+    question: "why should we follow your journey?",
     answer:
-      "Yes, we're always open to discussing new opportunities and collaborations. Whether you have a specific project in mind or want to explore possibilities, feel free to reach out through our contact channels.",
+      "because we're going to show you the unfiltered reality. mistakes, errors, problems. projects that don't gain any traction and the ones that do. this is the best way to find out WHY if you plan to ship your own stuff or do research. no sugar coating, just raw building in public.",
   },
 ];
 

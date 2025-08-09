@@ -8,23 +8,25 @@ const projectsData = [
     name: "Perplexigrid",
     image: "/projects/perplexigrid.png",
     description: "Advanced grid-based data visualization platform",
+    link: "https://www.perplexigrid.com",
   },
   {
     name: "Mapora",
     image: "/projects/mapora.png",
     description: "Interactive mapping and location intelligence solution",
+    link: "https://www.getmapora.com",
   },
   {
     name: "Crevia",
     image: "/projects/crevia.png",
     description: "Creative content management and collaboration tool",
+    link: "https://www.getcrevia.com",
   },
 ];
 
 const ProjectsSection = () => {
-  const handleProjectClick = (projectName: string) => {
-    console.log(`Clicked on ${projectName}`);
-    // Add your navigation logic here
+  const handleProjectClick = (link: string) => {
+    window.open(link, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -72,7 +74,7 @@ const ProjectsSection = () => {
               <ProjectCard
                 name={project.name}
                 image={project.image}
-                onClick={() => handleProjectClick(project.name)}
+                onClick={() => handleProjectClick(project.link)}
               />
             </Box>
           ))}
