@@ -70,7 +70,7 @@ const Hero = () => {
               px: { xs: 2, sm: 0 },
             }}
           >
-            we're on the hunt for <strong>the one</strong> product—and we'll share
+            we&apos;re on the hunt for <strong>the one</strong> product—and we&apos;ll share
             every hack, failure, and victory. follow along at
             journeytotheone.com.
           </Typography>

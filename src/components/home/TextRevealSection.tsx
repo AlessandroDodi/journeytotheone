@@ -26,7 +26,7 @@ export default function TextRevealSection() {
           blurStrength={8}
           wordAnimationEnd="bottom center"
         >
-          "all we have to decide is what to do with the time that is given us." we're building & shipping a product a month. maybe even several, depends on the month. because in this game, speed beats perfection every single time.
+          &ldquo;all we have to decide is what to do with the time that is given us.&rdquo; we&apos;re building &amp; shipping a product a month. maybe even several, depends on the month. because in this game, speed beats perfection every single time.
         </ScrollReveal>
       </Box>
     </Stack>

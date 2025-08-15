@@ -21,7 +21,7 @@ const WhoWeAre = () => {
               px: { xs: 2, sm: 0 },
             }}
           >
-            who are "we"?
+            who are &ldquo;we&rdquo;?
           </Typography>
 
           <Box sx={{ position: "relative", mb: { xs: 4, md: 8 }, width: "100%", maxWidth: "900px" }}>

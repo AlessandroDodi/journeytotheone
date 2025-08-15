@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Close as CloseIcon } from "@mui/icons-material";
 import Link from "next/link";
-import AuthButtons from "./AuthButtons";
+
 import Logo from "../../general/Logo";
 
 type NavigationItem = {

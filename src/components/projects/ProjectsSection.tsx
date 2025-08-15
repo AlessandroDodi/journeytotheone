@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Typography, Grid } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import ProjectCard from "./ProjectCard";
 
 const projectsData = [
