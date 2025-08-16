@@ -19,19 +19,6 @@ const Footer = () => {
           alignItems="center"
           spacing={2}
         >
-            <Link
-              component={NextLink}
-              href="/contact"
-              color="rgba(255, 255, 255, 0.7)"
-              sx={{
-                textDecoration: "none",
-                "&:hover": {
-                  color: "white",
-                },
-              }}
-            >
-              Contact
-            </Link>
         </Stack>
       </Container>
     </Box>
