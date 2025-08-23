@@ -1,6 +1,7 @@
-import { Stack, Typography, Container, TextField, Button } from "@mui/material";
+import { Stack, Typography, Container } from "@mui/material";
 import Image from "next/image";
 import gradient from "/public/gradient.png";
+import SignupForm from "./SignupForm";
 
 const Hero = () => {
   return (
@@ -76,25 +77,17 @@ const Hero = () => {
           </Typography>
         </Stack>
       </Container>
+      
       <Stack 
-        direction={{ xs: "column", sm: "row" }} 
+        direction="column" 
         spacing={2} 
         width={{ xs: "90%", sm: 400 }}
         maxWidth="400px"
         mt={6}
         px={{ xs: 2, sm: 0 }}
+        alignItems="center"
       >
-        <TextField type="email" placeholder="enter your email" fullWidth />
-        <Button 
-          variant="outlined" 
-          color="info"
-          sx={{ 
-            minWidth: { xs: "100%", sm: "auto" },
-            py: { xs: 1.5, sm: "auto" },
-          }}
-        >
-          Join
-        </Button>
+        <SignupForm project="hero" />
       </Stack>
     </Stack>
   );

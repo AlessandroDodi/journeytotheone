@@ -1,5 +1,8 @@
 // /api/signup.js
-import { sql } from '@vercel/postgres';
+import { neon } from '@neondatabase/serverless';
+
+// Get the database connection string from environment variables
+const sql = neon(process.env.DATABASE_URL);
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -17,7 +20,7 @@ export default async function handler(req, res) {
     await sql`
       CREATE TABLE IF NOT EXISTS beta_signups (
         id SERIAL PRIMARY KEY,
-        email TEXT NOT NULL,
+        email TEXT NOT NULL UNIQUE,
         project TEXT NOT NULL,
         referrer TEXT,
         created_at TIMESTAMP DEFAULT NOW()
@@ -27,12 +30,19 @@ export default async function handler(req, res) {
     // Insert new signup
     await sql`
       INSERT INTO beta_signups (email, project, referrer)
-      VALUES (${email}, ${project}, ${referrer});
+      VALUES (${email}, ${project}, ${referrer})
+      ON CONFLICT (email) DO NOTHING;
     `;
 
     return res.status(200).json({ success: true });
   } catch (err) {
     console.error('Error saving signup:', err);
+    
+    // Check if it's a duplicate email error
+    if (err.message && err.message.includes('duplicate key')) {
+      return res.status(409).json({ error: 'Email already registered' });
+    }
+    
     return res.status(500).json({ error: 'Internal server error' });
   }
 }
