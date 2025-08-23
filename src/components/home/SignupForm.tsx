@@ -11,7 +11,7 @@ interface SignupFormProps {
   referrer?: string;
 }
 
-const SignupForm = ({ project = "general", referrer }: SignupFormProps) => {
+const SignupForm = ({ project = "jtt1", referrer }: SignupFormProps) => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);

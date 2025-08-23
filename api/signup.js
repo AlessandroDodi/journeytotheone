@@ -1,8 +1,5 @@
-// /api/signup.js
-import { neon } from '@neondatabase/serverless';
-
-// Get the database connection string from environment variables
-const sql = neon(process.env.DATABASE_URL);
+// /api/signup.js - Vercel Store (Postgres) compatible
+import { sql } from '@vercel/postgres';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -16,7 +13,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Create table if it doesn't exist
+    // Create table if it doesn't exist (Vercel Store will handle this automatically)
     await sql`
       CREATE TABLE IF NOT EXISTS beta_signups (
         id SERIAL PRIMARY KEY,
