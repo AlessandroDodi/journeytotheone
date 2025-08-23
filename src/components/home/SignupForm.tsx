@@ -63,7 +63,7 @@ const SignupForm = ({ project = "jtt1", referrer }: SignupFormProps) => {
           setError(data.error || "Something went wrong. Please try again.");
         }
       }
-    } catch (err) {
+    } catch {
       setError("Network error. Please check your connection.");
     } finally {
       setIsLoading(false);
@@ -98,10 +98,10 @@ const SignupForm = ({ project = "jtt1", referrer }: SignupFormProps) => {
             }}
           />
           <Typography variant="h6" color="white" textAlign="center">
-            You're all set! 🎉
+            You&apos;re all set! 🎉
           </Typography>
           <Typography variant="body2" color="rgba(255, 255, 255, 0.8)" textAlign="center">
-            We'll send you updates about our journey to the one.
+            We&apos;ll send you updates about our journey to the one.
           </Typography>
         </Box>
       </motion.div>
