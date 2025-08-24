@@ -11,7 +11,7 @@ const projectsData = [
     link: "https://www.perplexigrid.com",
   },
   {
-    name: "Mapora (sponsored by google)",
+    name: "Mapora (sponsored by the google maps platform)",
     image: "/projects/mapora.png",
     description: "Interactive mapping and location intelligence solution",
     link: "https://www.getmapora.com",
