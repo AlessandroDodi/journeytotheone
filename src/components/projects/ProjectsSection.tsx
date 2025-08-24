@@ -31,6 +31,7 @@ const ProjectsSection = () => {
 
   return (
     <Box
+      id="projects"
       sx={{
         py: { xs: 8, md: 20 },
         backgroundColor: "white",

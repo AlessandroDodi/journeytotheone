@@ -1,17 +1,17 @@
 import { sql } from '@vercel/postgres';
+import { NextRequest, NextResponse } from 'next/server';
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  const { email, project, referrer } = req.body;
-
-  if (!email || !project) {
-    return res.status(400).json({ error: 'Missing required fields' });
-  }
-
+export async function POST(request: NextRequest) {
   try {
+    const { email, project, referrer } = await request.json();
+
+    if (!email || !project) {
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      );
+    }
+
     // Create table if it doesn't exist
     await sql`
       CREATE TABLE IF NOT EXISTS beta_signups (
@@ -29,9 +29,12 @@ export default async function handler(req, res) {
       VALUES (${email}, ${project}, ${referrer});
     `;
 
-    return res.status(200).json({ success: true });
-  } catch (err) {
+    return NextResponse.json({ success: true });
+  } catch (err: any) {
     console.error('Error saving signup:', err);
-    return res.status(500).json({ error: 'Internal server error' });
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
   }
 }

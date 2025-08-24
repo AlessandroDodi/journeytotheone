@@ -49,12 +49,20 @@ const MobileDrawer = ({
         {navigationItems.map((item) => (
           <ListItem
             key={item.label}
-            component={Link}
-            href={item.href}
+            onClick={() => {
+              if (item.href.startsWith('#')) {
+                const element = document.querySelector(item.href);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }
+              onClose();
+            }}
             sx={{
               px: 0,
               py: 2,
               borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+              cursor: "pointer",
             }}
           >
             <ListItemText
@@ -66,17 +74,6 @@ const MobileDrawer = ({
           </ListItem>
         ))}
       </List>
-      <Box sx={{ mt: 4 }}>
-        <Button
-          component={Link}
-          href="/auth/signup"
-          variant="outlined"
-          fullWidth
-          color="info"
-        >
-          Join
-        </Button>
-      </Box>
     </Box>
   );
 

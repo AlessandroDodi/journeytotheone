@@ -15,8 +15,7 @@ import MobileDrawer from "./MobileDrawer";
 import Link from "next/link";
 
 const mainNavigationItems = [
-  { label: "Home", href: "/" },
-  { label: "Projects", href: "/publish-blog" },
+  { label: "Projects", href: "#projects" },
 ];
 
 const ResponsiveAppBar = () => {
@@ -42,17 +41,7 @@ const ResponsiveAppBar = () => {
           <Logo variant="white" />
 
           {!isMobile && (
-            <>
-              <DesktopNavigation items={mainNavigationItems} />
-              <Button
-                component={Link}
-                href="/auth/signup"
-                variant="outlined"
-                color="info"
-              >
-                Join
-              </Button>
-            </>
+            <DesktopNavigation items={mainNavigationItems} />
           )}
 
           {isMobile && <MobileMenuButton onClick={handleDrawerToggle} />}

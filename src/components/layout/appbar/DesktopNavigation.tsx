@@ -25,8 +25,14 @@ const DesktopNavigation = ({ items }: DesktopNavigationProps) => {
       {items.map((item) => (
         <Button
           key={item.label}
-          component={Link}
-          href={item.href}
+          onClick={() => {
+            if (item.href.startsWith('#')) {
+              const element = document.querySelector(item.href);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }
+          }}
           sx={{
             color: "rgba(255, 255, 255, 0.7)",
             textTransform: "none",
