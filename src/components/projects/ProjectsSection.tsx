@@ -5,19 +5,19 @@ import ProjectCard from "./ProjectCard";
 
 const projectsData = [
   {
-    name: "Perplexigrid",
+    name: "Perplexigrid (featured on perplexity.ai)",
     image: "/projects/perplexigrid.png",
     description: "Advanced grid-based data visualization platform",
     link: "https://www.perplexigrid.com",
   },
   {
-    name: "Mapora",
+    name: "Mapora (sponsored by google)",
     image: "/projects/mapora.png",
     description: "Interactive mapping and location intelligence solution",
     link: "https://www.getmapora.com",
   },
   {
-    name: "Crevia",
+    name: "Crevia (#FUNDED)",
     image: "/projects/crevia.png",
     description: "Creative content management and collaboration tool",
     link: "https://www.getcrevia.com",
