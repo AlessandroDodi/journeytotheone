@@ -87,7 +87,7 @@ const Hero = () => {
         px={{ xs: 2, sm: 0 }}
         alignItems="center"
       >
-        <SignupForm project="hero" />
+        <SignupForm project="journeytotheone" />
       </Stack>
     </Stack>
   );
