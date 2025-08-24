@@ -1,5 +1,4 @@
-import { Box, Container, Stack, Link } from "@mui/material";
-import NextLink from "next/link";
+import { Box, Container, Stack } from "@mui/material";
 
 const Footer = () => {
   return (

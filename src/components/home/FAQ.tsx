@@ -15,7 +15,7 @@ const FAQ = ({ items }: FAQProps) => {
       <Container maxWidth="lg">
         <Stack spacing={6}>
           <Typography variant="h2" mb={2}>
-            Frequently Asked Questions
+            frequently asked questions
           </Typography>
 
           <Stack spacing={4}>
