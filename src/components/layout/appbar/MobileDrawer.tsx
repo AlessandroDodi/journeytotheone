@@ -7,10 +7,8 @@ import {
   List,
   ListItem,
   ListItemText,
-  Button,
 } from "@mui/material";
 import { Close as CloseIcon } from "@mui/icons-material";
-import Link from "next/link";
 
 import Logo from "../../general/Logo";
 

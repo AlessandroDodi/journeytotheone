@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Button } from "@mui/material";
-import Link from "next/link";
 
 type NavigationItem = {
   label: string;

@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     `;
 
     return NextResponse.json({ success: true });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('Error saving signup:', err);
     return NextResponse.json(
       { error: 'Internal server error' },

@@ -2,7 +2,6 @@
 
 import {
   AppBar,
-  Button,
   Toolbar,
   useMediaQuery,
   useTheme,
@@ -12,7 +11,6 @@ import MobileMenuButton from "./MobileMenuButton";
 import DesktopNavigation from "./DesktopNavigation";
 import Logo from "../../general/Logo";
 import MobileDrawer from "./MobileDrawer";
-import Link from "next/link";
 
 const mainNavigationItems = [
   { label: "Projects", href: "#projects" },
