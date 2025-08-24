@@ -1,4 +1,3 @@
-// /api/signup.js - Vercel Store (Postgres) compatible
 import { sql } from '@vercel/postgres';
 
 export default async function handler(req, res) {
@@ -13,11 +12,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Create table if it doesn't exist (Vercel Store will handle this automatically)
+    // Create table if it doesn't exist
     await sql`
       CREATE TABLE IF NOT EXISTS beta_signups (
         id SERIAL PRIMARY KEY,
-        email TEXT NOT NULL UNIQUE,
+        email TEXT NOT NULL,
         project TEXT NOT NULL,
         referrer TEXT,
         created_at TIMESTAMP DEFAULT NOW()
@@ -27,19 +26,12 @@ export default async function handler(req, res) {
     // Insert new signup
     await sql`
       INSERT INTO beta_signups (email, project, referrer)
-      VALUES (${email}, ${project}, ${referrer})
-      ON CONFLICT (email) DO NOTHING;
+      VALUES (${email}, ${project}, ${referrer});
     `;
 
     return res.status(200).json({ success: true });
   } catch (err) {
     console.error('Error saving signup:', err);
-    
-    // Check if it's a duplicate email error
-    if (err.message && err.message.includes('duplicate key')) {
-      return res.status(409).json({ error: 'Email already registered' });
-    }
-    
     return res.status(500).json({ error: 'Internal server error' });
   }
 }
