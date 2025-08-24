@@ -17,7 +17,7 @@ const projectsData = [
     link: "https://www.getmapora.com",
   },
   {
-    name: "Crevia (#FUNDED)",
+    name: "Crevia (#FUNDED by Adobe)",
     image: "/projects/crevia.png",
     description: "Creative content management and collaboration tool",
     link: "https://www.getcrevia.com",
