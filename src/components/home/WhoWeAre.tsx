@@ -89,7 +89,7 @@ const WhoWeAre = () => {
                     fontFamily: "Inter, sans-serif",
                   }}
                 >
-                  we knew we were a great fit, but life got in the way. 4 years later we reconnected not far from our campus and decided to build stuff. as much as we can and as best as we can.
+                  we knew we were a great fit, but life got in the way. 3 years later we reconnected not far from our campus and decided to build stuff. as much as we can and as best as we can.
                 </Typography>
               </Box>
             </Box>
